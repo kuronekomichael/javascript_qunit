@@ -61,3 +61,9 @@ test( "3桁-でNG", function() {
 test( "-4桁でNG", function() {
   equal( false, isZipCode('-4567') );
 });
+
+
+test( "000でNG", function() {
+  equal( false, isZipCode('000') );
+  equal( false, isZipCode(0) );
+});
