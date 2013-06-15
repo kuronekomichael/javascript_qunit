@@ -75,4 +75,10 @@ test( "000-0000でNG", function() {
   equal( false, isZipCode('000-0000') );
 });
 
+test( "123-0000でOK", function() {
+  equal( true, isZipCode('123-0000') );
+});
 
+test( "1230000でOK", function() {
+  equal( true, isZipCode('1230000') );
+});
