@@ -82,3 +82,15 @@ test( "123-0000でOK", function() {
 test( "1230000でOK", function() {
   equal( true, isZipCode('1230000') );
 });
+
+
+test( "0001234でNG", function() {
+  equal( false, isZipCode('0001234') );
+  equal( false, isZipCode('0000234') );
+});
+
+
+test( "000-1234でNG", function() {
+  equal( false, isZipCode('000-1234') );
+  equal( false, isZipCode('000-0234') );
+});
